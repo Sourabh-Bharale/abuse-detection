@@ -1,0 +1,4 @@
+flask
+flask_pymongo
+scikit-learn
+flask_cors

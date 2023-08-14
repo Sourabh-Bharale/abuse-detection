@@ -1,0 +1,196 @@
+/* fonts */
+@font-face {
+  font-family: 'Neptern';
+  /*a name to be used later*/
+  src: url('/public/fontNeptern/neptern.ttf');
+  /*URL to font*/
+}
+
+/* colors */
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --pink: RGB(244, 194, 194);
+  --veryDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --weight1: 200;
+  --weight2: 400;
+  --weight3: 600;
+}
+
+.cyan {
+  color: var(--cyan);
+  border-top: 3px solid var(--cyan);
+}
+
+.red {
+  color: var(--red);
+  border-top: 3px solid var(--red);
+}
+
+.blue {
+  color: var(--blue);
+  border-top: 3px solid var(--blue);
+}
+
+.orange {
+  color: var(--orange);
+  border-top: 3px solid var(--orange);
+}
+
+.pink {
+  color: var(--pink);
+  border-top: 3px solid var(--pink);
+}
+
+/* app defaults */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+
+
+/* Title */
+.titleClass {
+  font-family: Neptern;
+  text-align: center;
+  font-size: 10rem;
+  letter-spacing: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.clipText {
+  background: linear-gradient(144deg, rgb(198, 157, 157), #be263a 55%, #4d0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* user input */
+
+.userInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputGroup {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 1em 0 1em 0;
+  max-width: 190px;
+}
+
+.inputGroup input,
+button {
+  font-size: 100%;
+  padding: 0.8em;
+  margin: 10px;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  border-radius: 20px;
+  border-color: rgb(150, 150, 200);
+  color: aliceblue;
+}
+
+.inputGroup input {
+  background-color: transparent;
+}
+
+/* prediction boxes */
+.box {
+  border-radius: 5px;
+  box-shadow: 0px 0px 30px -20px var(--veryDarkBlue);
+  padding: 50px;
+  margin: 20px;
+}
+
+.box p {
+  color: var(--grayishBlue);
+}
+
+.box h2 {
+  font-weight: 900;
+  font-size: 4em;
+}
+
+.box h1 {
+  color: var(--veryDarkBlue);
+  font-size: 2em;
+  position: relative;
+  top: -30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+
+/* inside prediction boxes */
+.cardTitle h2 {
+  font-size: 3em;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.cardTitle span {
+  padding-left: 10px;
+  position: relative;
+  top: -10px;
+  left: 0;
+  font-size: 0.5em;
+  color: var(--veryDarkBlue);
+}
+
+
+/* media querys */
+@media (max-width: 450px) {
+  .box {
+    height: 100px;
+  }
+
+  .titleClass {
+    font-size: 5em;
+  }
+}
+
+@media (max-width: 950px) and (min-width: 450px) {
+  .box {
+    text-align: center;
+    height: 180px;
+  }
+
+  .titleClass {
+    font-size: 5em;
+  }
+}
+
+@media (min-width: 950px) {
+  .container {
+    display: flex;
+
+  }
+
+  .box {
+    width: 20%;
+
+  }
+}
